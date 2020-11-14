@@ -1,5 +1,7 @@
 <script>
   export let progress;
+
+  import Link from './nav/nav-link.svelte';
 </script>
 
 <style>
@@ -24,11 +26,7 @@
     justify-content:space-evenly;
     align-items: center;
   }
-  navbar ul li {
-    align-items: center;
-    padding: 0;
-  }
-  
+
 
   .headshop {
     height: 80px;
@@ -39,11 +37,12 @@
 
 <navbar>
   <ul>
-    <li style={progress<1?"color:red":"color:blue"}>Technologies</li>
-    <li style={progress>=1?"color:red":"color:blue"}>Projects</li>
+    <Link url="?tech" name="TECHNOLOGIES" selected={progress<1}/>
+    <Link url="?projects" name="PROJECTS" selected={progress>=1 && progress <2}/>
+
     <img src="headshot.jpg" alt="Headshot" class="headshop" />
-    <li>Testimonials</li>
-    <li>Contact</li>
+    <Link url="?testimonials" name="TESTIMONIALS" selected={progress>=2 && progress <3}/>
+    <Link url="?contact" name="CONTACT" selected={progress>=3}/>
   </ul>
 </navbar>
 <navbarBack />

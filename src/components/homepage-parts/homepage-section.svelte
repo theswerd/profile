@@ -1,5 +1,5 @@
 <script>
-    export let backgroundColor;
+  export let backgroundColor;
 </script>
 
 <style>
@@ -10,6 +10,7 @@
     display: flex;
     background-color: var(--background-color);
 
+    scroll-snap-align: start;
   }
 </style>
 

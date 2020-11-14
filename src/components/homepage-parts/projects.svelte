@@ -3,4 +3,4 @@
 
 </script>
 
-<Section  backgroundColor="#ff00ff">Page 2</Section>
+<Section  backgroundColor="#ff00ff">Projects</Section>
