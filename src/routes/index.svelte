@@ -1,46 +1,47 @@
+<script>
+  import Technologies from "../components/homepage-parts/technologies.svelte";
+  import Projects from "../components/homepage-parts/projects.svelte";
+  import HomepageNav from "../components/homepage-parts/homepage-nav.svelte";
+
+  let progress = 0;
+  function handleScroll(event) {
+	  
+	progress =event.target.scrollLeft/window.innerWidth;
+	console.log(progress);
+  }
+
+
+  //   $(window).on("scroll", function () {
+  //     $("#realcontent").css("left", -$(window).scrollTop());
+  //   });
+</script>
+
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
-
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
+  flexcontainer {
+    display: flex;
+	flex-flow: column;
+	width: 100vw;
+    height: 100vh;
+  }
+  homepage {
+    width: 100vw;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    overflow-x: auto;
+  }
+  homepage::-webkit-scrollbar {
+    display: none;
+  }
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+  <title>Ben's Portfolio</title>
 </svelte:head>
-
-<h1>Great success!</h1>
-
-<figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<flexcontainer>
+  <HomepageNav bind:progress={progress}/>
+  <homepage on:scroll={handleScroll}>
+    <Technologies />
+    <Projects />
+  </homepage>
+</flexcontainer>

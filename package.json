@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "profile",
+  "description": "Portfolio Website",
   "version": "0.0.1",
   "scripts": {
     "start": "sapper dev",
