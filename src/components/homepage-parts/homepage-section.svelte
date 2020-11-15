@@ -9,8 +9,9 @@
 
     display: flex;
     background-color: var(--background-color);
-
+    position: relative;
     scroll-snap-align: start;
+    overflow: hidden;
   }
 </style>
 
