@@ -175,7 +175,7 @@
 </sidenav>
 <div class="highlight" />
 <nav>
-    <h1>Benjamin Swerdlow</h1>
+    <h1>Ben Swerdlow</h1>
 </nav>
 <main>
     <slot />
