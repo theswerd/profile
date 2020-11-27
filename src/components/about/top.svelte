@@ -1,7 +1,7 @@
 <script>
     let scroll;
     let screenHeight;
-    let scrollPercent;
+    let scrollPercent = 0;
     let handleScroll = () => {
         console.log("SCROLLED");
         scrollPercent = (scroll / screenHeight) * 200;
@@ -145,12 +145,12 @@
                 many more. I also have experience developing on AWS, GCP,
                 Vercel, and Github Pages.
             </p>
-            <skills>
-                <h1 class="web">Web</h1>
-                <h1 class="mobile" style="margin-left:{scrollPercent}px">
+            <skills style="margin-bottom:{scrollPercent}px;">
+                <h1>Web</h1>
+                <h1 class="mobile" style="margin-left:calc(1.5*{scrollPercent}px)">
                     Mobile
                 </h1>
-                <h1 class="cloud">Cloud</h1>
+                <h1 style="margin-left:{scrollPercent}px;">Cloud</h1>
             </skills>
         </div>
     </div>
