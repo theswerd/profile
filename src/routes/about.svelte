@@ -1,8 +1,12 @@
+<script>
+import Top from "../components/about/top.svelte";
+
+</script>
 
 <svelte:head>
 	<title>About</title>
 </svelte:head>
 
-<h1>About this site</h1>
 
-<p>This is the 'about' page. There's not much here.</p>
+<Top/>
+<div style="height:1000px"/>

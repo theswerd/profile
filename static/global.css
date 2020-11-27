@@ -1,4 +1,18 @@
+/*FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+:root {
+    --dark: #A4161A;
+    --accent: #E5383B;
+    --dark-grey: #161A1D;
+    --grey: #F5F3F4;
+    --nav-height: 60px;
+    --side-nav-width: 100px;
+}
+
 body {
-	margin: 0px;
-	
+    margin: 0px;
+    background-color: var(--dark);
+    font-family: 'Quicksand', sans-serif;
+    color: var(--grey);
 }
