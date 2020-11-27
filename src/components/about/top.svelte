@@ -7,18 +7,12 @@
         scrollPercent = (scroll / screenHeight) * 200;
     };
 
-
     let projects = [
         {
             name: "Public Tree Map",
-            technologies: [
-                "JavaScript",
-                "CSS",
-                "HTML",
-                "Leaflet Maps"
-            ],
+            technologies: ["JavaScript", "CSS", "HTML", "Leaflet Maps"],
             description: "Public Tree Map was my first project at Hack For LA.",
-            image: "projects/publictreemap.png"
+            image: "projects/publictreemap.png",
         },
         {
             name: "WHO App",
@@ -28,10 +22,11 @@
                 "Java",
                 "Terraform",
                 "GCP",
-                "Google Analytics"
+                "Google Analytics",
             ],
-            description: "The WHO App team was the highest performance team I have ever worked on.",
-            image: "projects/who.png"
+            description:
+                "The WHO App team was the highest performance team I have ever worked on.",
+            image: "projects/who.png",
         },
     ];
 
@@ -39,23 +34,20 @@
 
     let currentProject = projects[0];
 
-    function setCurrentProject(){
-        if((projects.length-1) == index){
-           index = 0;
-        }else{
+    function setCurrentProject() {
+        if (projects.length - 1 == index) {
+            index = 0;
+        } else {
             index++;
         }
-        currentProject = projects[index]
-
+        currentProject = projects[index];
     }
     setInterval(setCurrentProject, 8000);
-
 </script>
 
 <style>
     section {
         border-bottom: 1px solid var(--accent);
-
     }
     h1 {
         text-transform: uppercase;
@@ -99,6 +91,11 @@
         height: calc(100vh - var(--nav-height));
         display: flex;
         align-items: flex-start;
+    }
+    @media only screen and (max-width: 400px) {
+        skills {
+            display: none;
+        }
     }
 
     @media only screen and (max-width: 1000px) {
@@ -159,15 +156,9 @@
     </div>
     <div class="desktopSidebar">
         <div class="imageContainer">
-        <img alt="" src={currentProject['image']}/>
-        <h2>
-            {currentProject['name']}
-        </h2>
-        <p>
-            {currentProject['description']}
-        </p>
+            <img alt="" src={currentProject['image']} />
+            <h2>{currentProject['name']}</h2>
+            <p>{currentProject['description']}</p>
         </div>
-        
-        
     </div>
 </section>
