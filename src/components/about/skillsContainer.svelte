@@ -11,23 +11,30 @@
     }
     li {
         list-style: none;
+        padding: 0px 0px 0px 5px;
 
     }
     ul {
-        padding: 0px;
         margin: 0px;
+        padding: 0px;
         font-size: 25px;
     }
     h1 {
-        font-size: 36px;
-        padding: 0px;
+        font-size: 40px;
+        padding: 5px;
         margin: 0px;
     }
     h2 {
         padding: 10px;
+        font-size: 30px;
         margin: 0px;
     }
-   
+   column {
+       padding-bottom: 25px;
+   }
+   a:hover {
+       color: #ffaaaa;
+   }
 </style>
 
 <column>
@@ -45,7 +52,7 @@
         <h2>Projects</h2>
         <ul>
             {#each projects as project}
-                <li>{@html project}</li>
+        <li><a href={project.link}>{project.name}</a></li>
             {/each}
         </ul>
     {/if}
