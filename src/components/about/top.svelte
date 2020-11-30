@@ -63,6 +63,7 @@
         padding-left: 25px;
         padding-right: 25px;
         font-size: 16px;
+        text-align: right;
     }
 
     h2 {
@@ -146,11 +147,12 @@
                 Vercel, and Github Pages.
             </p>
             <skills style="margin-bottom:{scrollPercent}px;">
-                <h1>Web</h1>
+                
                 <h1 class="mobile" style="margin-left:calc(1.5*{scrollPercent}px)">
                     Mobile
                 </h1>
                 <h1 style="margin-left:{scrollPercent}px;">Cloud</h1>
+                <h1>Web</h1>
             </skills>
         </div>
     </div>

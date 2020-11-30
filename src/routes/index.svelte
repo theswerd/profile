@@ -1,6 +1,5 @@
 <script>
 import About from "./about.svelte";
-
 </script>
 
 <svelte:head>
