@@ -30,7 +30,7 @@
         "Sapper",
         "ReactJS",
         "SSR",
-        "PWA"
+        "PWA",
     ];
     let webProjects = [
         {
@@ -57,7 +57,6 @@
         "Terraform",
         "Docker",
     ];
-    
 
     let backendTechnologies = [
         "NodeJS",
@@ -79,48 +78,68 @@
         "Hasura GraphQL",
         "Redis",
         "Cloud Firestore",
-        "MongoDB"
+        "MongoDB",
     ];
 
     let managementProjects = [
         {
             link: "https://github.com/worldhealthorganization/app",
-            name: "World Health Organization App Client UI Lead, Code Owner, and Technical Lead",
+            name:
+                "World Health Organization App Client UI Lead, Code Owner, and Technical Lead",
         },
     ];
+    let innerWidth;
+    $: outlined = innerWidth >= 900;
 </script>
 
 <style>
     .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, 300px);
         justify-content: center;
     }
+    @media only screen and (max-width: 899px) {
+        .grid {
+            grid-template-columns: repeat(auto-fit, 300px);
+        }
+    }
+    @media only screen and (min-width: 900px) {
+        .grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
     section {
-        padding-left: 20px;
+        padding: 0px 15px;
     }
     h1 {
         font-size: 40px;
     }
 </style>
 
+<svelte:window bind:innerWidth />
 <section>
     <h1>Skills</h1>
     <div class="grid">
         <SkillsContainer
             title="Mobile"
             technologies={mobileTechnologies}
-            projects={mobileProjects} />
+            projects={mobileProjects}
+            {outlined} />
         <SkillsContainer
             title="Web"
             technologies={webTechnologies}
-            projects={webProjects} />
-        <SkillsContainer title="Cloud" 
-        technologies={cloudTechnologies}/>
-        <SkillsContainer title="Backend" 
-        technologies={backendTechnologies} projects={backendProjects}/>
-        <SkillsContainer title="Database" 
-        technologies={databaseTechnologies}/>
-        <SkillsContainer title="Management" projects={managementProjects}/>
+            projects={webProjects}
+            {outlined} />
+        <SkillsContainer title="Cloud" technologies={cloudTechnologies} />
+        <SkillsContainer
+            title="Backend"
+            technologies={backendTechnologies}
+            projects={backendProjects}
+            {outlined} />
+        <SkillsContainer
+            title="Database"
+            technologies={databaseTechnologies}
+            {outlined} />
+        <SkillsContainer title="Management" projects={managementProjects} />
     </div>
 </section>

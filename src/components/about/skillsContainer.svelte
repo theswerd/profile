@@ -3,11 +3,14 @@
     export let technologies;
     export let projects;
     export let recommendations;
+    export let outlined;
 </script>
 
 <style>
     column {
         text-align: center;
+        border-right: solid var(--outlined) var(--accent);
+        padding: 5px;
     }
     li {
         list-style: none;
@@ -43,7 +46,7 @@
     }
 </style>
 
-<column>
+<column style="--outlined:{outlined?"1px":0};">
     <h1>{title}</h1>
     {#if technologies != undefined}
         <h2>Technologies</h2>
