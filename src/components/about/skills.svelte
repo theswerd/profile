@@ -29,6 +29,8 @@
         "Svelte",
         "Sapper",
         "ReactJS",
+        "SSR",
+        "PWA"
     ];
     let webProjects = [
         {
@@ -48,8 +50,10 @@
     let cloudTechnologies = [
         "Amazon Web Services",
         "Google Cloud Platform",
+        "Firebase",
         "Vercel",
         "Github Pages",
+        "Github Actions",
         "Terraform",
         "Docker",
     ];
@@ -62,6 +66,13 @@
         "Rocket",
         "Actix",
     ];
+    let backendProjects = [
+        {
+            link: "https://github.com/theswerd/beachy",
+            name: "Beachy App - Hack SC 2020",
+        },
+    ];
+
     let databaseTechnologies = [
         "PostgreSQL",
         "AWS Aurora",
@@ -69,6 +80,13 @@
         "Redis",
         "Cloud Firestore",
         "MongoDB"
+    ];
+
+    let managementProjects = [
+        {
+            link: "https://github.com/worldhealthorganization/app",
+            name: "World Health Organization App Client UI Lead, Code Owner, and Technical Lead",
+        },
     ];
 </script>
 
@@ -100,9 +118,9 @@
         <SkillsContainer title="Cloud" 
         technologies={cloudTechnologies}/>
         <SkillsContainer title="Backend" 
-        technologies={backendTechnologies}/>
+        technologies={backendTechnologies} projects={backendProjects}/>
         <SkillsContainer title="Database" 
         technologies={databaseTechnologies}/>
-        <SkillsContainer title="Management" />
+        <SkillsContainer title="Management" projects={managementProjects}/>
     </div>
 </section>
