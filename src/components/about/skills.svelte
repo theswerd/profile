@@ -110,9 +110,13 @@
 
     section {
         padding: 0px 15px;
+        border-bottom: 1px solid var(--accent);
+
     }
     h1 {
         font-size: 40px;
+        margin-top: 5px;
+        padding: 0px;
     }
 </style>
 

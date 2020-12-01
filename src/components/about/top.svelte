@@ -100,7 +100,7 @@
     }
     @media only screen and (min-width: 1000px) {
         .adaptableSize {
-            width: 500px;
+            width: 600px;
         }
     }
 
@@ -118,6 +118,7 @@
     .imageContainer img {
         width: 100%;
         height: 100%;
+        object-fit: contain;
     }
 </style>
 
