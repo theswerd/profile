@@ -43,7 +43,7 @@
     }
     h1 {
         text-transform: uppercase;
-        font-size: 75px;
+        font-size: 100px;
         font-weight: 500;
         padding: 0px 0px;
         margin: 0px;
@@ -75,9 +75,11 @@
         transform: rotate(-90deg);
         display: block;
         float: left;
-        justify-content: end;
         position: absolute;
-        bottom: 40px;
+        justify-content: end;
+        padding-left:60px;
+        margin-left: 20px;
+        bottom: -40px;
     }
 
     section {
@@ -85,7 +87,7 @@
         display: flex;
         align-items: flex-start;
     }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 500px) {
         skills {
             display: none;
         }
