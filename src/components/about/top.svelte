@@ -1,12 +1,4 @@
 <script>
-    let scroll;
-    let screenHeight;
-    let scrollPercent = 0;
-    let handleScroll = () => {
-        console.log("SCROLLED");
-        scrollPercent = (scroll / screenHeight) * 200;
-    };
-
     let projects = [
         {
             name: "Public Tree Map",
@@ -51,9 +43,9 @@
     }
     h1 {
         text-transform: uppercase;
-        font-size: 100px;
+        font-size: 75px;
         font-weight: 500;
-        padding: 0px;
+        padding: 0px 0px;
         margin: 0px;
         white-space: nowrap;
     }
@@ -85,7 +77,7 @@
         float: left;
         justify-content: end;
         position: absolute;
-        bottom: 20px;
+        bottom: 40px;
     }
 
     section {
@@ -93,7 +85,7 @@
         display: flex;
         align-items: flex-start;
     }
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 600px) {
         skills {
             display: none;
         }
@@ -127,10 +119,6 @@
     }
 </style>
 
-<svelte:window
-    on:scroll={handleScroll}
-    bind:scrollY={scroll}
-    bind:innerHeight={screenHeight} />
 <section>
     <div>
         <div class="adaptableSize">
@@ -146,12 +134,10 @@
                 many more. I also have experience developing on AWS, GCP,
                 Vercel, and Github Pages.
             </p>
-            <skills style="margin-bottom:{scrollPercent}px;">
-                
-                <h1 class="mobile" style="margin-left:calc(1.5*{scrollPercent}px)">
-                    Mobile
-                </h1>
-                <h1 style="margin-left:{scrollPercent}px;">Cloud</h1>
+            <skills>
+                <h1>Leader</h1>
+                <h1>Mobile</h1>
+                <h1>Cloud</h1>
                 <h1>Web</h1>
             </skills>
         </div>
