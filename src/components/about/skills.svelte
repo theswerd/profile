@@ -78,7 +78,6 @@
         "Hasura GraphQL",
         "Redis",
         "Cloud Firestore",
-        "MongoDB",
     ];
 
     let managementProjects = [
@@ -93,37 +92,45 @@
 </script>
 
 <style>
-    .grid {
+    grid {
         display: grid;
         justify-content: center;
+        border-bottom: 1px solid var(--accent);
+    }
+    technologiesGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 75px);
+    }
+    technologiesGrid img{
+        margin: 15px;
     }
     @media only screen and (max-width: 899px) {
-        .grid {
+        grid {
             grid-template-columns: repeat(auto-fit, 300px);
         }
     }
     @media only screen and (min-width: 900px) {
-        .grid {
+        grid {
             grid-template-columns: repeat(3, 1fr);
         }
     }
 
     section {
-        padding: 0px 15px;
+        padding: 0px;
+        margin: 0px;
         border-bottom: 1px solid var(--accent);
-
     }
     h1 {
         font-size: 40px;
         margin-top: 5px;
-        padding: 0px;
+        padding: 15px;
     }
 </style>
 
 <svelte:window bind:innerWidth />
 <section>
     <h1>Skills</h1>
-    <div class="grid">
+    <grid>
         <SkillsContainer
             title="Mobile"
             technologies={mobileTechnologies}
@@ -145,5 +152,38 @@
             technologies={databaseTechnologies}
             {outlined} />
         <SkillsContainer title="Management" projects={managementProjects} />
-    </div>
+    </grid>
+    <technologiesGrid>
+        <img src="tech/amazonaws.svg" alt="AWS"/>
+        <img src="tech/googlecloud.svg" alt="GCP"/>
+        <img src="tech/vercel.svg" alt="Vercel"/>
+        <img src="tech/firebase.svg" alt="Firebase"/>
+        <img src="tech/docker.svg" alt="Docker"/>
+        <img src="tech/kubernetes.svg" alt="Kubernetes"/>
+        <img src="tech/ubuntu.svg" alt="Ubuntu"/>
+        <img src="tech/node-dot-js.svg" alt="NodeJS"/>
+        <img src="tech/rust.svg" alt="Rust"/>
+        <img src="tech/python.svg" alt="Python"/>
+        <img src="tech/nginx.svg" alt="Nginx"/>
+        <img src="tech/redis.svg" alt="Redis"/>
+        <img src="tech/postgresql.svg" alt="PostgreSQL"/>
+        <img src="tech/graphql.svg" alt="GraphQL"/>
+        <img src="tech/flutter.svg" alt="Flutter"/>
+        <img src="tech/dart.svg" alt="Dart"/>
+        <img src="tech/git.svg" alt="Git"/>
+        <img src="tech/githubactions.svg" alt="Github Actions"/>
+        <img src="tech/jenkins.svg" alt="Jenkins"/>
+        <img src="tech/javascript.svg" alt="JavaScript"/>
+        <img src="tech/typescript.svg" alt="TypeScript"/>
+        <img src="tech/css3.svg" alt="CSS"/>
+        <img src="tech/react.svg" alt="React"/>
+        <img src="tech/next-dot-js.svg" alt="NextJS"/>
+        <img src="tech/vue-dot-js.svg" alt="VueJS"/>
+        <img src="tech/svelte.svg" alt="Svelte"/>
+        <img src="tech/socket-dot-io.svg" alt="SocketIO"/>
+        <img src="tech/terraform.svg" alt="Terraform"/>
+        <img src="tech/yarn.svg" alt="Yarn"/>
+        <img src="tech/markdown.svg" alt="Markdown"/>
+        <img src="tech/stripe.svg" alt="Stripe"/>
+    </technologiesGrid>
 </section>

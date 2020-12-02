@@ -30,9 +30,11 @@
 <svelte:head>
 	<title>{status}</title>
 </svelte:head>
+<h1>
+	Sorry mate, you seem to be lost
+</h1>
 
 <h1>{status}</h1>
-
 <p>{error.message}</p>
 
 {#if dev && error.stack}

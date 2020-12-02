@@ -2,7 +2,6 @@
 </script>
 
 <style>
-    
     nav {
         position: absolute;
         top: 0;
@@ -48,8 +47,7 @@
         height: 80px;
         opacity: 1;
         transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation: beam 6.5s
-            cubic-bezier(0.77, 0, 0.175, 1) infinite;
+        animation: beam 6.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
     }
 
     @-webkit-keyframes beam {
@@ -148,24 +146,28 @@
         <table>
             <tr>
                 <td>
-                    <a href="https://github.com/theswerd"><img
+                    <a href="https://github.com/theswerd" target="_blank"><img
                             src="socials/github.svg"
                             alt="Github" /></a>
                 </td>
                 <td>
-                    <a href="https://instagram.com/ben_swerdlow"><img
+                    <a
+                        href="https://instagram.com/ben_swerdlow"
+                        target="_blank"><img
                             src="socials/instagram.svg"
                             alt="Instagram" /></a>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <a href="https://twitter.com/benswerd"><img
+                    <a href="https://twitter.com/benswerd" target="_blank"><img
                             src="socials/twitter.svg"
                             alt="Twitter" /></a>
                 </td>
                 <td>
-                    <a href="https://www.linkedin.com/in/benswerdlow/"><img
+                    <a
+                        href="https://www.linkedin.com/in/benswerdlow/"
+                        target="_blank"><img
                             src="socials/linkedin.svg"
                             alt="LinkedIn" /></a>
                 </td>
