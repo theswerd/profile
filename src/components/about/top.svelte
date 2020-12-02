@@ -137,6 +137,7 @@
                 many more. I also have experience developing on AWS, GCP,
                 Vercel, and Github Pages.
             </p>
+            
             <skills>
                 <h1>Leader</h1>
                 <h1>Mobile</h1>
