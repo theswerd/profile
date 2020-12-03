@@ -73,11 +73,10 @@
         -o-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
         transform: rotate(-90deg);
-        display: block;
         float: left;
         position: absolute;
         justify-content: end;
-        padding-left:60px;
+        padding-left: 60px;
         margin-left: 20px;
         bottom: -40px;
     }
@@ -86,6 +85,11 @@
         height: calc(100vh - var(--nav-height));
         display: flex;
         align-items: flex-start;
+    }
+    @media only screen and (min-width: 501px) {
+        skills {
+            display: block;
+        }
     }
     @media only screen and (max-width: 500px) {
         skills {
@@ -137,7 +141,7 @@
                 many more. I also have experience developing on AWS, GCP,
                 Vercel, and Github Pages.
             </p>
-            
+
             <skills>
                 <h1>Leader</h1>
                 <h1>Mobile</h1>
