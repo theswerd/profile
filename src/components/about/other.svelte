@@ -8,19 +8,37 @@
         border-bottom: 1px solid var(--accent);
         padding: 30px;
     }
+    
     .headshot {
         border-radius: 50%;
         border: 2px solid var(--accent);
-        height: 500px;
         display: flex;
         float: right;
     }
+
     row {
         display: inline-flex;
         justify-content: space-between;
-        flex-direction: row;
         flex-grow: 1;
-        width: 100%;
+    }
+
+    @media only screen and (min-width: 701px) {
+        row {
+            flex-direction: row;
+        }
+        .headshot {
+            width: 40%;
+        }
+    }
+ 
+    @media only screen and (max-width: 700px) {
+        row {
+            flex-direction: column;
+            
+        }
+        .headshot {
+            width: 80%;
+        }
     }
 </style>
 
