@@ -1,4 +1,19 @@
 <script>
+ import { stores } from '@sapper/app';
+  const { page } = stores();
+  $: title = generateTitle($page.path);
+  $: console.log($page.path);
+    
+  function generateTitle(path) {
+      if(path.startsWith("/blog")){
+        return "BLOG";
+      }else if(path.startsWith("/contact")){
+        return "CONTACT";
+
+      }else{
+        return "BEN SWERDLOW"
+      }
+  }
 </script>
 
 <style>
@@ -177,7 +192,7 @@
 </sidenav>
 <div class="highlight" />
 <nav>
-    <h1>Ben Swerdlow</h1>
+    <h1>{title}</h1>
 </nav>
 <main>
     <slot />
