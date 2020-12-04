@@ -104,6 +104,7 @@
     }
     technologiesGrid img {
         margin: 15px;
+        width: 35px;
     }
     @media only screen and (max-width: 899px) {
         grid {

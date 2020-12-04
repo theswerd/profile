@@ -27,7 +27,8 @@
             flex-direction: row;
         }
         .headshot {
-            width: 40%;
+            width: 40vw;
+            height: 40vw;
         }
     }
  
