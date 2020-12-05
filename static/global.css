@@ -2,10 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
 :root {
-    --dark: #A4161A;
-    --accent: #E5383B;
+    --dark: #01439C;
+    --accent: #c2a489;
     --dark-grey: #161A1D;
-    --grey: #F5F3F4;
+    --grey: #d1e6f8;
     --nav-height: 60px;
     --side-nav-width: 100px;
 }
